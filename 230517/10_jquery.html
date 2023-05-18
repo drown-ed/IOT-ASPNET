@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('input').click(function(){
+                $('.page').fadeToggle('5');
+            });
+
+            $('.box').css({
+                width : '100px',
+                height : '100px',
+                backgroundColor : 'red'
+            }).animate({
+                width : '300px',
+                backgroundColor : 'blue',
+                opacity : '0.5'
+            }, 1500);
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="Toggle">
+    <div class ="page">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusamus natus consequatur, doloribus blanditiis, officia debitis est consectetur ut recusandae voluptate quis repudiandae fugiat, nihil soluta inventore. Ab, numquam corporis!
+            </p>
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        window.onload = function() {
+            document.body.setAttribute('id', 'test');
+
+            var val = document.body.getAttribute('id');
+            console.log(val);
+
+            var title = document.getElementById('title');
+            var title_class = title.getAttribute('class');
+            console.log(title_class);
+            
+            title.setAttribute('class', 'jsclass');
+        }
+    </script>
+    <style>
+        .testclass {
+            background-color: aqua;
+        }
+
+        .jsclass {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3 id = "title" class = "testclass">Title</h3>
+</body>
+</html>

@@ -7,15 +7,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script>
-        window.onload = function(){
-            var image = document.getElementById('image');
-            image.src = 'https://picsum.photos/640/300';
-            image.width = 600;
-            image.height = 300;
+        window.onload = function() {
+            var button = document.querySelector("input");
+            button.onclick = function(ev) {
+                alert('click!');
+            }
         }
     </script>
 </head>
 <body>
-    <img id = "image">
+    <input type="button" value ="클릭">
 </body>
 </html>

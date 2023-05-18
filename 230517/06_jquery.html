@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script>
+        // 전통 자바스크립트 온로드 방식
+        window.onload = function() {
+            var headers = document.querySelectorAll('h1');
+            for (var i = 0; i < headers.length; i++){
+                var header = headers[i];
+                header.style.color = 'red';
+                header.style.backgroundColor = 'black';
+            }
+        }
+
+        // jquery 온로드 방식
+        $(document).ready(function(){
+            $('h1').css('color', 'blue');
+
+            var src = $('script').attr('src');
+            console.log(src);
+        })
+    </script>
+</head>
+<body>
+    <h1>1</h1>
+</body>
+</html>
