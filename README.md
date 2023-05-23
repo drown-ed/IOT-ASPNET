@@ -36,3 +36,7 @@ Bootstrap 앨범사이트 클로닝
 
 ASP.NET Core MVC 게시판
 <img src="images\aspnet03.png" width="700">
+
+## 5일차
+- ASP.NET MVC
+	- 게시판 계속
