@@ -45,6 +45,7 @@ namespace _02_boardapp.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["succeed"] = "회원가입 성공했습니다";
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -61,6 +62,34 @@ namespace _02_boardapp.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+
+                if (result.Succeeded)
+                {
+                    TempData["succeed"] = "로그인 했습니다";
+                    return RedirectToAction("Index", "Home");   
+                }
+
+                ModelState.AddModelError("", "로그인 실패!");
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            TempData["succeed"] = "로그아웃 했습니다";
+            return RedirectToAction("Index", "Home");
         }
     }
 }
