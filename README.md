@@ -30,7 +30,7 @@ Bootstrap 앨범사이트 클로닝
 <img src="images\aspnet02.gif" width="700">
 
 ## 4일차
-- ASP.NET MVC
+- ASP.NET Core MVC
 	- ASP.NET 기본
 	- ASP.NET 프로젝트
 
@@ -40,3 +40,5 @@ ASP.NET Core MVC 게시판
 ## 5일차
 - ASP.NET MVC
 	- 게시판 계속
+
+## 
