@@ -40,13 +40,19 @@
                 {
                     <div class="dropstart">
                         <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                            <img src="https://www.google.com/logos/fnbx/animal_paws/cat_kp_lm.gif" alt="cat" width="32" height="32" class="rounded-circle">
                         </a>
                         <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
                             <ul class="dropdown-menu text-small shadow">
-                                <li>@userManager.GetUserName(User)</li>
-                                <li><a class="dropdown-item" href="#">환경설정</a></li>
-                                <li><a class="dropdown-item" href="#">프로필</a></li>
+                                <li><a class="dropdown-item" href="#">@userManager.GetUserName(User)</a></li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li><a class="dropdown-item" asp-action="ListRoles" asp-controller="Admin">권한목록</a></li>
+                                    <li><a class="dropdown-item" asp-action="Index" asp-controller="SbAdmin">관리자페이지</a></li>
+                                }
+                                <li><a class="dropdown-item" asp-action="Profile" asp-controller="Account"
+                                       asp-route-userName="@userManager.GetUserName(User)">프로필</a>
+                                </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><button class="dropdown-item" type="submit">로그아웃</button></li>
                             </ul>
