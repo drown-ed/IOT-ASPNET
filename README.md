@@ -69,7 +69,40 @@ ASP.NET Core MVC 게시판
 - ASP.NET Core MVC
 	- 부트스트랩 테마(SEO Dream) 적용
 	
+<img src="./images/aspnet06.gif" width="700">
+
+## 9일차
+- ASP.NET Core MVC
+	- SEO Dream 테마 완료
+		- 스크롤이 되는 화면, 안되는 화면 메뉴 분리
+		- 포트폴리오 동적관리(이미지 업로드)
+		- IIS .net6.0 런타임 설치
+	- 다른 Bootstrap 테마 적용
+
+SEO Theme 완료
+
+<img src="./images/aspnet07.gif" width="700">	
+
+다른 테마 적용
+
+<img src="./images/aspnet08.gif" width="700">	
 	
+## 10일차
 - ASP.NET RestAPI
-- 개인포트폴리오 
+	- RestAPI Server
+	- WPF Cilent
+
+RestAPI Server
+	
+<img src="./images/restapi01.png" width="700">		
+	
+- 개인 포트폴리오 웹
 	- 부트스트랩 테마 재적용
+	
+메인화면 템플릿 - Start Bootstrap / [Personal Theme](https://startbootstrap.com/theme/personal)
+
+<img src="./images/aspnet09.png" width="700">	
+
+관리자화면 템플릿 - Theme Wagon / [Sneat Theme](https://themewagon.com/themes/free-responsive-bootstrap-5-html5-admin-template-sneat/)
+
+<img src="./images/aspnet10.png" width="700">	
